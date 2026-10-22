@@ -1,0 +1,76 @@
+/*
+Theme Name: Saveur Restaurant
+Author: Ammad
+Description: Elegant, fully responsive restaurant theme.
+Version: 1.0
+Text Domain: saveur
+*/
+:root{--gold:#c8a165;--dark:#14110f;--dark2:#1d1915;--cream:#f7f1e8;--text:#5b5248}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--dark);font-weight:600;line-height:1.2}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+.btn{display:inline-block;padding:14px 34px;border:1px solid var(--gold);background:var(--gold);color:#fff;letter-spacing:2px;text-transform:uppercase;font-size:13px;transition:.3s}
+.btn:hover{background:transparent;color:var(--gold)}.btn.ghost{background:transparent;color:#fff;border-color:#fff}.btn.ghost:hover{background:#fff;color:var(--dark)}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:13px;display:block;margin-bottom:12px}
+section{padding:100px 0}.center{text-align:center}.sec-title{font-size:clamp(30px,4vw,46px);margin-bottom:18px}
+.divider{width:60px;height:2px;background:var(--gold);margin:0 auto 50px}
+/* header */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;padding:20px 0;transition:.3s}
+.site-header.scrolled{background:rgba(20,17,15,.95);padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Playfair Display',serif;font-size:28px;color:#fff;letter-spacing:2px}.logo span{color:var(--gold)}
+.menu{display:flex;gap:32px;list-style:none}.menu a{color:#fff;font-size:14px;letter-spacing:1.5px;text-transform:uppercase}.menu a:hover{color:var(--gold)}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+/* hero */
+.hero{min-height:min(100vh,920px);padding:140px 0 100px;display:flex;align-items:center;text-align:center;color:#fff;background:linear-gradient(rgba(10,8,6,.6),rgba(10,8,6,.7)),url(img/1.jpg) center/cover}
+.hero h1{color:#fff;font-size:clamp(40px,7vw,84px);margin-bottom:20px}.hero p{max-width:620px;margin:0 auto 36px;font-size:18px;color:#e9e1d5}
+.hero .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{position:relative}.about-img img{height:520px;width:100%;object-fit:cover}
+.about-img:after{content:'';position:absolute;inset:24px -24px -24px 24px;border:2px solid var(--gold);z-index:-1}
+.about p{margin-bottom:18px}.stats{display:flex;gap:40px;margin-top:30px}.stats b{display:block;font-family:'Playfair Display';font-size:36px;color:var(--gold)}
+/* menu */
+.menu-sec{background:#fff}.tabs{display:flex;justify-content:center;gap:12px;margin-bottom:50px;flex-wrap:wrap}
+.tab{padding:10px 26px;border:1px solid var(--gold);background:none;color:var(--dark);cursor:pointer;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;font-family:inherit}
+.tab.active,.tab:hover{background:var(--gold);color:#fff}
+.dishes{display:grid;grid-template-columns:1fr 1fr;gap:30px 60px}
+.dish{display:flex;gap:18px;align-items:flex-start;padding-bottom:20px;border-bottom:1px dashed #ddd2c2}
+.dish-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline}.dish h4{font-size:20px}
+.price{color:var(--gold);font-family:'Playfair Display';font-size:20px;font-weight:600;white-space:nowrap}
+.dish p{font-size:15px}.dish.hide{display:none}
+/* specials */
+.specials{background:var(--dark);color:#cfc5b8}.specials .sec-title{color:#fff}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card{background:var(--dark2);overflow:hidden}.card img{height:250px;width:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.06)}
+.card-body{padding:28px}.card h3{color:#fff;font-size:24px;margin-bottom:10px}.card .price{display:block;margin-top:14px}
+/* gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:.4s}.gallery-grid img:hover{opacity:.85}
+.gallery-grid .big{grid-column:span 2;grid-row:span 2}
+/* testimonials */
+.testi{background:linear-gradient(rgba(20,17,15,.88),rgba(20,17,15,.88)),url(img/8.jpg) center/cover fixed;color:#d9cfc2}.testi .sec-title{color:#fff}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.t-card{border:1px solid rgba(200,161,101,.35);padding:36px;text-align:center}.t-card .q{font-size:50px;color:var(--gold);font-family:'Playfair Display';line-height:1}
+.t-card p{font-style:italic;margin:10px 0 20px}.t-card h4{color:#fff}.t-card small{color:var(--gold)}
+/* reservation */
+.res-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px}
+.info li{list-style:none;margin-bottom:22px}.info b{display:block;color:var(--dark);font-family:'Playfair Display';font-size:19px}
+form.res{background:#fff;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:18px;box-shadow:0 20px 50px rgba(0,0,0,.06)}
+form.res input,form.res select,form.res textarea{width:100%;padding:14px;border:1px solid #e3d9cb;font-family:inherit;font-size:15px;background:var(--cream)}
+form.res .full{grid-column:1/-1}.notice{grid-column:1/-1;background:#e8f3e8;color:#2d6a2d;padding:12px}
+/* footer */
+.site-footer{background:var(--dark);color:#a99f92;padding:70px 0 0}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.site-footer h4{color:#fff;margin-bottom:16px}
+.f-bottom{border-top:1px solid #2c2620;margin-top:50px;padding:22px 0;text-align:center;font-size:14px}
+@media(max-width:900px){
+ section{padding:70px 0}.about-grid,.res-grid,.dishes{grid-template-columns:1fr}.about-img img{height:380px}
+ .spec-grid,.t-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+ .f-grid{grid-template-columns:1fr}.nav-toggle{display:block}
+ .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--dark);padding:20px 4%;gap:16px}
+ .menu.open{display:flex}.site-header{background:rgba(20,17,15,.95)}
+}
+@media(max-width:560px){form.res{grid-template-columns:1fr;padding:24px}.stats{gap:22px}.about-img:after{display:none}}
